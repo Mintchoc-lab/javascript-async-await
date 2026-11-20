@@ -1,3 +1,8 @@
+// Return ผลลัพธ์ออกมาเป็น Promise Function
+
+// Function getJohnProfile ดึงข้อมูลจาก Server ไม่สำเร็จเสมอ
+
+
 //Exercise #2
 let getJohnProfile = () => {
   return new Promise(function (_, reject) {
@@ -13,3 +18,11 @@ let getJohnProfile = () => {
 };
 
 // Start coding here
+function displayReceivedData(data) {
+  console.log(data);
+}
+
+function displayError(error) {
+  console.log(error);
+}
+getJohnProfile().then(displayReceivedData).catch(displayError);
